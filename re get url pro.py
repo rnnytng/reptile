@@ -9,3 +9,4 @@ result=obj.finditer(response.text)
 for item in result:
     dict=item.groupdict()
     print(dict)
+#也可将正则中的内容换成自己想要得到的数据
