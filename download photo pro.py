@@ -1,8 +1,9 @@
+#将get url 与 download pthoto 合并，即可在该网站一次爬取多张图片
 import requests
 import re
 import json
 page=input("输入类别:")#小写拼音
-num=int(input("x:"))
+num=int(input("x:"))#页数
 if num==1:
     url1=f"https://www.4kdesk.com/4K{page}/"
 else:
@@ -26,5 +27,5 @@ for item1 in result1:
         desker2=json.loads(desk2)#字符串变字典
         name=desker2.split("/")[-1]#照片的src最后一个/后的内容截取，作为照片的名字
         rese_img=requests.get(desker2)
-        with open(f"f:\photo/{name}","wb")as fp:
+        with open(f"f:\photo/{name}","wb")as fp:#自定义保存路径
             fp.write(rese_img.content)#rese_img.content拿到文件的字节
