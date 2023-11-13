@@ -1,2 +1,5 @@
+国内镜像文件，安装速度快
 pip install xxx -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 
+浏览器驱动及浏览器
+https://sites.google.com/chromium.org/driver/
